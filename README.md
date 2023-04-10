@@ -33,12 +33,12 @@ leafletマップを表示
 agh.leafmap_view(latitude=35,longitude=140,zoom=4)
 ```
 
-data/gpxdf.csvがない場合、GPXファイルをDataFrameに変換してdata/gpxdf.csvに書き出し
+data/gpx/gpxdf.csvがない場合、GPXファイルをDataFrameに変換してdata/gpx/gpxdf.csvに書き出し
 
-data/gpxdf.csvがある場合、GPXファイルをDataFrameに変換してdata/gpxdf.csvをDataFrameに変換したものと結合し、
-結合したものをHTMLに書き出す。DataFrameをdata/gpxdf.csvに書き出し(更新)
+data/gpx/gpxdf.csvがある場合、GPXファイルをDataFrameに変換してdata/gpx/gpxdf.csvをDataFrameに変換したものと結合し、
+結合したものをHTMLに書き出す。DataFrameをdata/gpx/gpxdf.csvに書き出し(更新)
 
-引数`mode='r'`でdata/gpxdf.csvにすでに追加されたトラック一覧を表示(他の引数は指定する必要なし)
+引数`mode='r'`でdata/gpx/gpxdf.csvにすでに追加されたトラック一覧を表示(他の引数は指定する必要なし)
 
 ```py
 agh.addgpxtohtml(gpx_filename,outhtml_filename,mode)

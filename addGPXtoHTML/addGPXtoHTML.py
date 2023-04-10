@@ -20,19 +20,19 @@ def leafmap_view(latitude=35,longitude=140,zoom=4):#mapを表示
 
 def addgpxtohtml(gpx_filename="abc",outhtml_filename="abc",mode='w'):
     if mode=='w':
-        df = gpxdf.read_gpx(f'{f_path}/data/{gpx_filename}.gpx')
+        df = gpxdf.read_gpx(f'{f_path}/data/gpx/{gpx_filename}.gpx')
         try:
-            df2 = pd.read_csv(f"{f_path}/data/gpxdf.csv")
+            df2 = pd.read_csv(f"{f_path}/data/gpx/gpxdf.csv")
             u = df2['trackname'].unique()
             print(f'すでに追加されたトラック一覧:{u}')
             df2=df2.append(df, ignore_index=True)
-            gpxdf.to_html_map(df2, f'{f_path}/data/{outhtml_filename}.html',zoom_start=11)
-            df2.to_csv(f"{f_path}/data/gpxdf.csv",index=False)
-            print(f"data/{outhtml_filename}.htmlを作成。data/gpxdf.csvを更新")
+            gpxdf.to_html_map(df2, f'{f_path}/data/gpx/{outhtml_filename}.html',zoom_start=11)
+            df2.to_csv(f"{f_path}/data/gpx/gpxdf.csv",index=False)
+            print(f"data/gpx/{outhtml_filename}.htmlを作成。data/gpx/gpxdf.csvを更新")
         except:
-            df.to_csv(f"{f_path}/data/gpxdf.csv",index=False)
-            print(f"data/gpxdf.csvを作成")
+            df.to_csv(f"{f_path}/data/gpx/gpxdf.csv",index=False)
+            print(f"data/gpx/gpxdf.csvを作成")
     else:
-        df = pd.read_csv(f"{f_path}/data/gpxdf.csv")
+        df = pd.read_csv(f"{f_path}/data/gpx/gpxdf.csv")
         u = df['trackname'].unique()
         print(f'すでに追加されたトラック一覧:{u[0:-1]}')

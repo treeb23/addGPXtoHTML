@@ -5,6 +5,9 @@
 https://github.com/kurama8103/gpxdf を利用している
 
 まず必要なライブラリのインストール
+
+`!注意 geospatial はインストールに1〜2分かかる`
+
 ```py
 !pip install geospatial
 !pip3 install git+https://github.com/kurama8103/gpxdf

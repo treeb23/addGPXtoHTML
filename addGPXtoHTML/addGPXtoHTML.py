@@ -19,7 +19,7 @@ def leafmap_view(latitude=35,longitude=140,zoom=4):#mapを表示
     return m
 
 def addgpxtohtml(gpx_filename,outhtml_filename):
-    df = gpxdf.read_gpx(f'{gpx_filename}.gpx')
+    df = gpxdf.read_gpx(f'{f_path}/data/{gpx_filename}.gpx')
     try:
         df2 = pd.read_csv(f"{f_path}/data/gpxdf.csv")
         u = df2['trackname'].unique()

@@ -20,6 +20,10 @@ import gpxdf
 !pip install git+https://github.com/treeb23/addGPXtoHTML.git
 import addGPXtoHTML as agh
 ```
+filepathを設定
+```py
+filepath()
+```
 
 leafletマップを表示
 ```py

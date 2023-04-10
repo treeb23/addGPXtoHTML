@@ -22,7 +22,7 @@ import addGPXtoHTML as agh
 ```
 filepathを設定
 ```py
-filepath()
+agh.filepath()
 ```
 
 leafletマップを表示

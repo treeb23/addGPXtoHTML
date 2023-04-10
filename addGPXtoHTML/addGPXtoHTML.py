@@ -24,7 +24,7 @@ def addgpxtohtml(gpx_filename="abc",outhtml_filename="abc",mode='w'):
         try:
             df2 = pd.read_csv(f"{f_path}/data/gpxdf.csv")
             u = df2['trackname'].unique()
-            print(f'すでに追加されたトラック一覧:{u[0:-1]}')
+            print(f'すでに追加されたトラック一覧:{u}')
             df2=df2.append(df, ignore_index=True)
             gpxdf.to_html_map(df2, f'{f_path}/data/{outhtml_filename}.html',zoom_start=11)
             df2.to_csv(f"{f_path}/data/gpxdf.csv",index=False)
